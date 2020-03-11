@@ -1,0 +1,48 @@
+Array ( 
+	[0] => validateResponse validate(validate $parameters) 
+	[1] => validateResponse validate(validate $parameters) 
+)
+
+Array ( 
+	[0] => struct ebsFault { 
+			string code; 
+			string message; 
+		} 
+	[1] => string key 
+	[2] => string uid 
+	[3] => struct ebs_header { key SoftwareConformanceKey; uid AuditId; } 
+	[4] => struct validate { requests requests; lc locale; } 
+	[5] => string lc 
+	[6] => struct requests { hcvRequest hcvRequest; } 
+	[7] => struct hcvRequest { hn healthNumber; vc versionCode; string feeServiceCodes; } 
+	[8] => string hn 
+	[9] => string vc 
+	[10] => struct validateResponse { hcvResults results; } 
+	[11] => struct hcvResults { string auditUID; person results; } 
+	[12] => string sex 
+	[13] => struct person { dateTime dateOfBirth; dateTime expiryDate; string firstName; sex gender; hn healthNumber; string lastName; string responseAction; string responseCode; string responseDescription; responseID responseID; string secondName; vc versionCode; feeServiceDetails feeServiceDetails; } 
+	[14] => struct feeServiceDetails { string feeServiceCode; dateTime feeServiceDate; string feeServiceResponseCode; string feeServiceResponseDescription; } 
+	[15] => string responseID 
+	[16] => string muid 
+	[17] => struct idp_header { muid ServiceUserMUID; } 
+	[18] => string user 
+	[19] => string muid 
+	[20] => struct msa_header { muid ServiceUserMUID; user UserID; } 
+)
+
+
+
+	<soapenv:Body wsu:Id="id-5">
+		 <ns5:validate xmlns:ns4="http://msa.ebs.health.ontario.ca/" xmlns:ns3="http://idp.ebs.health.ontario.ca/"
+		 xmlns:ns2="http://ebs.health.ontario.ca/"
+		 xmlns:ns5="http://hcv.health.ontario.ca/" >
+			<requests>
+				<hcvRequest>
+					<healthNumber>2222211122</healthNumber>
+					<versionCode>WW</versionCode>
+				</hcvRequest>
+			 </requests>
+			<locale>en</locale>
+		</ns5:validate>
+	</soapenv:Body>
+</soapenv:Envelope>
